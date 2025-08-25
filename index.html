@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Coding & AI Learning Journey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-code"></i>
+                <h2>Learning Hub</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#dashboard" class="nav-link active" data-section="dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#syllabus" class="nav-link" data-section="syllabus"><i class="fas fa-book"></i> Syllabus</a></li>
+                <li><a href="#calendar" class="nav-link" data-section="calendar"><i class="fas fa-calendar"></i> Calendar</a></li>
+                <li><a href="#chapters" class="nav-link" data-section="chapters"><i class="fas fa-bookmark"></i> Chapters</a></li>
+                <li><a href="#exercises" class="nav-link" data-section="exercises"><i class="fas fa-dumbbell"></i> Exercises</a></li>
+                <li><a href="#progress" class="nav-link" data-section="progress"><i class="fas fa-chart-line"></i> Progress</a></li>
+                <li><a href="#resources" class="nav-link" data-section="resources"><i class="fas fa-link"></i> Resources</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <header class="section-header">
+                    <h1>Welcome Back, Future AI Master! 🚀</h1>
+                    <p>Your journey to becoming the best in coding and AI starts here.</p>
+                </header>
+
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-fire"></i></div>
+                        <div class="stat-info">
+                            <h3 id="streak-count">0</h3>
+                            <p>Day Streak</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="stat-info">
+                            <h3 id="completed-tasks">0</h3>
+                            <p>Tasks Completed</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        <div class="stat-info">
+                            <h3 id="study-hours">0</h3>
+                            <p>Hours Studied</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="stat-info">
+                            <h3 id="achievements">0</h3>
+                            <p>Achievements</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="today-section">
+                    <h2>Today's Mission</h2>
+                    <div class="today-card" id="today-tasks">
+                        <p>Loading today's tasks...</p>
+                    </div>
+                </div>
+
+                <div class="motivational-quote">
+                    <blockquote id="daily-quote">
+                        "The expert in anything was once a beginner who refused to give up."
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- Syllabus Section -->
+            <section id="syllabus" class="content-section">
+                <header class="section-header">
+                    <h1>Complete Learning Syllabus</h1>
+                    <p>Your roadmap to mastering coding and AI</p>
+                </header>
+                
+                <div class="syllabus-container" id="syllabus-content">
+                    <!-- Syllabus content will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Calendar Section -->
+            <section id="calendar" class="content-section">
+                <header class="section-header">
+                    <h1>Learning Calendar</h1>
+                    <p>Track your daily progress and schedule</p>
+                </header>
+                
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                        <h2 id="current-month">January 2024</h2>
+                        <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-grid" id="calendar-grid">
+                        <!-- Calendar will be generated here -->
+                    </div>
+                </div>
+
+                <div class="day-details" id="day-details" style="display: none;">
+                    <h3 id="selected-date">Selected Date</h3>
+                    <div class="task-input">
+                        <input type="text" id="new-task" placeholder="Add a new task...">
+                        <button id="add-task">Add</button>
+                    </div>
+                    <div class="tasks-list" id="tasks-list">
+                        <!-- Tasks for selected date will appear here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapters Section -->
+            <section id="chapters" class="content-section">
+                <header class="section-header">
+                    <h1>Learning Chapters</h1>
+                    <p>Structured lessons created by your AI teacher</p>
+                </header>
+                
+                <div class="chapters-container" id="chapters-content">
+                    <div class="chapter-card sample">
+                        <h3>Chapter 1: Programming Fundamentals</h3>
+                        <p>Learn the core concepts that form the foundation of all programming.</p>
+                        <div class="chapter-meta">
+                            <span class="difficulty beginner">Beginner</span>
+                            <span class="duration">Est. 2 weeks</span>
+                        </div>
+                        <button class="btn-primary">Start Chapter</button>
+                    </div>
+                    <div class="chapter-card sample locked">
+                        <h3>Chapter 2: Data Structures & Algorithms</h3>
+                        <p>Master the building blocks of efficient programming.</p>
+                        <div class="chapter-meta">
+                            <span class="difficulty intermediate">Intermediate</span>
+                            <span class="duration">Est. 4 weeks</span>
+                        </div>
+                        <button class="btn-secondary" disabled>🔒 Locked</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exercises Section -->
+            <section id="exercises" class="content-section">
+                <header class="section-header">
+                    <h1>Practice Exercises</h1>
+                    <p>Test your knowledge with custom exercises</p>
+                </header>
+                
+                <div class="exercises-container" id="exercises-content">
+                    <div class="exercise-card">
+                        <h3>Variables & Data Types Quiz</h3>
+                        <p>Test your understanding of basic programming concepts</p>
+                        <div class="exercise-meta">
+                            <span class="questions">10 Questions</span>
+                            <span class="time">15 mins</span>
+                        </div>
+                        <button class="btn-primary">Start Exercise</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section id="progress" class="content-section">
+                <header class="section-header">
+                    <h1>Progress Tracking</h1>
+                    <p>Visualize your learning journey</p>
+                </header>
+                
+                <div class="progress-container">
+                    <div class="progress-overview">
+                        <div class="progress-circle">
+                            <svg class="progress-ring" width="120" height="120">
+                                <circle class="progress-ring-circle" cx="60" cy="60" r="54"></circle>
+                            </svg>
+                            <div class="progress-text">
+                                <span class="progress-percentage">15%</span>
+                                <span class="progress-label">Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress-stats">
+                            <div class="stat">
+                                <h4>Chapters Completed</h4>
+                                <p>1 of 12</p>
+                            </div>
+                            <div class="stat">
+                                <h4>Exercises Done</h4>
+                                <p>5 of 120</p>
+                            </div>
+                            <div class="stat">
+                                <h4>Skills Mastered</h4>
+                                <p>3 of 50</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources Section -->
+            <section id="resources" class="content-section">
+                <header class="section-header">
+                    <h1>Learning Resources</h1>
+                    <p>Curated materials for your journey</p>
+                </header>
+                
+                <div class="resources-container">
+                    <div class="resource-category">
+                        <h3><i class="fas fa-code"></i> Programming Basics</h3>
+                        <div class="resource-links">
+                            <a href="#" class="resource-link">Python Official Tutorial</a>
+                            <a href="#" class="resource-link">JavaScript MDN Docs</a>
+                            <a href="#" class="resource-link">Git Version Control</a>
+                        </div>
+                    </div>
+                    <div class="resource-category">
+                        <h3><i class="fas fa-robot"></i> AI & Machine Learning</h3>
+                        <div class="resource-links">
+                            <a href="#" class="resource-link">Machine Learning Coursera</a>
+                            <a href="#" class="resource-link">Deep Learning Specialization</a>
+                            <a href="#" class="resource-link">PyTorch Tutorials</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Notification Permission Modal -->
+    <div id="notification-modal" class="modal">
+        <div class="modal-content">
+            <h2>Enable Daily Notifications</h2>
+            <p>Get daily reminders about your learning tasks and stay on track!</p>
+            <div class="modal-actions">
+                <button id="enable-notifications" class="btn-primary">Enable Notifications</button>
+                <button id="skip-notifications" class="btn-secondary">Maybe Later</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
