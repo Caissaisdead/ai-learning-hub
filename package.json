@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo 'Static site - no build needed'"
+    "dev": "node server.js"
   },
   "keywords": ["learning", "ai", "education", "coding", "programming"],
   "author": "Your AI Teacher",
